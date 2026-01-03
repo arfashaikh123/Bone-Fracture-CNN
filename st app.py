@@ -195,10 +195,10 @@ def scanner():
                 st.markdown(f"<div class='card'><pre style='color:{CLR_SUBTLE};background:{CLR_CARD};border-radius:10px;padding:10px;margin-bottom:0;'>{details}</pre></div>", unsafe_allow_html=True)
                 if pred > 0.5:
                     st.success(f"NEGATIVE ({pred*100:.1f}%)", icon="✅")
-                    st.progress(pred, text="Confidence: {:.1f}% Not Fractured".format(pred*100))
+                    st.progress(float(pred), text=f"Confidence: <span style='color:{CLR_TEXT};'>{{:.1f}}% Not Fractured</span>".format(float(pred)*100))
                 else:
                     st.error(f"FRACTURE DETECTED ({(1-pred)*100:.1f}%)", icon="⚠️")
-                    st.progress(1-pred, text="Confidence: {:.1f}% Fractured".format((1-pred)*100))
+                    st.progress(float(1-pred), text=f"Confidence: <span style='color:{CLR_TEXT};'>{{:.1f}}% Fractured</span>".format(float(1-pred)*100))
             else:
                 st.warning("Model not loaded. Cannot run inference.")
         else:
