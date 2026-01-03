@@ -56,7 +56,7 @@ page = st.sidebar.radio("Navigation", ["Dashboard", "X-ray Scanner", "System Spe
 st.sidebar.markdown(f"<hr><span style='color:{CLR_SUBTLE};'>&copy; 2026 XrayAI</span>", unsafe_allow_html=True)
 
 # Load Model
-@st.cache_resource(allow_output_mutation=True)
+@st.cache_resource
 def load_model():
     try:
         model = tf.keras.models.load_model(MODEL_PATH)
