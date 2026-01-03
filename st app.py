@@ -33,15 +33,7 @@ st.set_page_config(
     page_title="FractureFlow AI v2.0",
     layout="wide",
     initial_sidebar_state="expanded",
-    page_icon="🦴",
-    theme={
-        "base": "light",
-        "primaryColor": CLR_ACCENT,
-        "backgroundColor": CLR_BG,
-        "secondaryBackgroundColor": CLR_CARD,
-        "textColor": "#000000",
-        "font": "sans serif"
-    }
+    page_icon="🦴"
 )
 
 
