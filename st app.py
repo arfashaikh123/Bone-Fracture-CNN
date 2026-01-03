@@ -218,7 +218,7 @@ def model_details():
         st.markdown(f"""
             <div class='card' style='display:flex;justify-content:space-between;align-items:center;'>
                 <span style='color:{CLR_ACCENT2};font-weight:bold;font-size:1.1em;'>{label}</span>
-                <span style='color:#000000;font-size:1.1em;'>{val}</span>
+                <span style='color:{CLR_TEXT};font-size:1.1em;'>{val}</span>
             </div>
         """, unsafe_allow_html=True)
 
